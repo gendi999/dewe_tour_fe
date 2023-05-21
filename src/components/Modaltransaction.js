@@ -6,21 +6,14 @@ import Historytrip from './Historytrip';
 const Modaltransaction = ({ show, onHide }) => {
     return (
       <Modal className="Mtran" show={show} onHide={onHide} centered>
-          {/* <div style={{ background: "white",width:"900px",  borderRadius: "5px",  borderColor: "white",  }}> */}
-          <div
-            // style={{ background:"E5E5E5",  height: "90.5vh", margin:"20px"}}
+          <div   
               className=" d-flex align-items-center justify-content-center"
               >
                 <div
-        //   className="bg-secondary"
+
           style={{
             background: "white",
-            // padding: "25px",
-            // borderRadius: "5px",
             width: "60rem",
-            // height:"500px",
-            // borderColor:"red",
-            // border:" 1px solid"
             
           }}>
             <div className="flex">
@@ -79,8 +72,8 @@ const Modaltransaction = ({ show, onHide }) => {
                 <h3  style={{marginLeft:"30px",fontWeight:"bold",color:"red"}}>IDR.12.000.000</h3>
             </div>
             <div className='flex'>
-                <Button style={{marginLeft:"660px",background:"red",marginBottom:"10px"}}>Cancel</Button>
-                <Button style={{marginLeft:"20px",background:"green",marginBottom:"10px"}}>Approve</Button>
+                <Button style={{marginLeft:"660px",width:"80px",background:"red",marginBottom:"10px"}}>Cancel</Button>
+                <Button style={{marginLeft:"20px",background:"green",width:"80px",marginBottom:"10px"}}>Approve</Button>
             </div>
 
 

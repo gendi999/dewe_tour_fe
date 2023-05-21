@@ -1,12 +1,8 @@
 import { Link } from "react-router-dom"
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
-import Card from 'react-bootstrap/Card';
 
 const Cardss = (props) => {
     
     const objTv = Object.values(props.value.TR)
-    // const objmovie = Object.values(props.value.Movies)
     console.log(objTv)
     const ListMovies = () => {
         return objTv.map((gendi) => {
@@ -46,25 +42,4 @@ const Cardss = (props) => {
 
 export default Cardss
 
-
-// export default function Props(Tv) {
-//     return (
-//         <>
-//         <div className="props">
-//             <h1>
-//                 Ini Props!
-//             </h1>
-//             <img src={require(`../image/${Tv.img}`)}></img>
-//             <p>{Tv.name}</p>
-//             <p>{Tv.years}</p>
-
-//         </div>
-//         <div>
-//         <img src={require(`../image/${Tv.img}`)}></img>
-//             <p>{Tv.name}</p>
-//             <p>{Tv.years}</p>
-//         </div>
-//         </>
-//     )
-// }
 

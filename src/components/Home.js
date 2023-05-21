@@ -25,21 +25,21 @@ function Home(){
         title:"6D/4N Fun Tessie",
         negara:"Australia",
         idr:"12.398.00",
-        quote:"12/15"
+        quote:"15/15"
       },
       tr2: {
         id:2,
         title:"6D/4N Exciting Summer in ...",
         images:"Rectangle2",
-        negara:"Amerika",
+        negara:"South Korea",
         idr:"12.398.00",
         quote:"12/15"
       },
       tr3: {
         id:3,
-        title:"4D/3N Overland Jakarta B...",
+        title:"8D/6N Wonderful Autum ...",
         images:"Rectangle3",
-        negara:"Australia",
+        negara:"Japan",
         idr:"12.398.00",
         quote:"12/15"
       },
@@ -47,25 +47,25 @@ function Home(){
         id:4,
         title:"4D/3N Overland Jakarta B...",
         images:"Rectangle4",
-        negara:"Australia",
+        negara:"Indonesia",
         idr:"12.398.00",
         quote:"12/15"
       },
       tr5: {
         id:5,
-        title:"4D/3N Overland Jakarta B...",
+        title:"4D/3N Labuan Bajo Delight",
         images:"Rectangle5",
-        negara:"Australia",
+        negara:"Indonesia",
         idr:"12.398.00",
-        quote:"12/15"
+        quote:"11/15"
       },
       tr6: {
         id:6,
         title:"4D/3N Overland Jakarta B...",
         images:"Rectangle6",
-        negara:"Australia",
+        negara:"Japanese",
         idr:"12.398.00",
-        quote:"12/15",
+        quote:"10/15",
       },
       
     }
@@ -84,7 +84,7 @@ function Home(){
 
           
           <p>Find great place to holiday</p>
-      <Button style={{position:"absolute", marginLeft:"900px"}} variant="warning">Search</Button>
+      <Button style={{position:"absolute", marginLeft:"900px",height:"35px",width:"80px"}} variant="warning">Search</Button>
       <Form.Control style={{width:"900px"}} className="" type="search" placeholder="Add your item here..." />
         </div>
         <img className="kontol" style={{position:"fixed",position:"absolute", zIndex:-1,top:"0", width:"100%"}}   src={require( "../images/pantai.png")} alt="gambar"></img>

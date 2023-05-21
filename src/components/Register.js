@@ -7,19 +7,15 @@ function Register() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [fullname, setFullname] = useState('');
-  const [gender, setGender] = useState('');
   const [phone, setPhone] = useState('');
-  const [addres, setAddres] = useState('');
-  
+
   const handleClose = () => {
     // Simpan data ke local storage
     localStorage.setItem('email', email);
     localStorage.setItem('password', password);
     localStorage.setItem('fullname', fullname);
-    localStorage.setItem('gender', gender);
     localStorage.setItem('phone', phone);
-    localStorage.setItem('addres', addres);
-    alert('ok');
+    // alert('ok');
     setShow(false);
   };
 
@@ -28,7 +24,7 @@ function Register() {
 
   return (
     <>
-      <Button variant="light" onClick={handleShow}>
+      <Button style={{width:"65px",height:"35px"}} variant="light" onClick={handleShow}>
                 Register
               </Button>
 
@@ -88,7 +84,7 @@ function Register() {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button className="loginn mx-5" variant="warning" onClick={handleClose}>
+          <Button className="loginn mx-5" style={{height:'45px'}} variant="warning" onClick={handleClose}>
             Register
           </Button>
         </Modal.Footer>

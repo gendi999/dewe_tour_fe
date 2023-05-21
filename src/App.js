@@ -9,6 +9,7 @@ import Modaltransaction from "./components/Modaltransaction";
 import Login from "./components/Login"
 import Home from "./components/Home";
 import Pay from "./components/Pay";
+import PrivateRoute from "./pages/PrivateRoutes"
 import Footer from "./components/Footer";
 // import Props from "./components/Props";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -16,24 +17,29 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import "./style.css"
 
 import Profile from "./components/Profile";
+import { useState } from "react";
 
 
 
 
 function App() {
-  // const [islogin, setislogin]=useState(false)
+  const [isAdminn, setisAdmin]=useState(false)
   return (
     <div>
       <Router>
       <Navbars/>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Trip" element={<Trip />} />
+
+<Route element={<PrivateRoute isAdminn={isAdminn} />}>
+        <Route exact path="/Trip" element={<Trip />} />
         <Route path="/Transaction" element={<Transaction />} />
         <Route path="/Modaltransaction" element={<Modaltransaction />} />
+        <Route path="/Addtrip" element={<Addtrip />} />
+  </Route>
+
         
         <Route path="/Profile" element={<Profile />} />
-        <Route path="/Addtrip" element={<Addtrip />} />
         <Route path="/Pay" element={<Pay />} />
         <Route path="/Detail/:id" element={<Detail />} />
         

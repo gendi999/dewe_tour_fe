@@ -53,13 +53,8 @@ function Transaction() {
               
               </tbody>
         </Table>
-        {/* <div style={{ background: "E5E5E5", height: "90.5vh", margin: "20px" }} className="d-flex align-items-center justify-content-center"> */}
-      {/* Tombol untuk menampilkan modal */}
 
-
-      {/* Modal */}
       <Modaltransaction show={showModal} onHide={handleModalHide} />
-    {/* </div> */}
       </div>
     </div>
         </>

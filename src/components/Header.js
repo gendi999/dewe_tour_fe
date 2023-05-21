@@ -24,8 +24,9 @@ function Header() {
   const handleLogout = () => {
     setIsLoggedIn(false);
     setIsAdmin(false);
-    localStorage.removeItem('isLoggedIn');
+    localStorage.removeItem('loggedIn');
     localStorage.removeItem('isAdmin');
+    window.location="/"
   };
    return <nav >
           <img style={{width:"100%"}} src={require( "../images/navba1.png")} alt="gambar"></img>
@@ -43,12 +44,13 @@ function Header() {
       <div className="right-side">
   {isLoggedIn ? (
     <Dropdown className="white">
-      <Dropdown.Toggle className="">
-      <img style={{border:"none"}}
+      <Dropdown.Toggle className="btnsa" >
+      <img 
+      // style={{border:"none"}}
             type="button"
             onClick={() => setHandleDropdown(!handleDropdown)}
             src={Dropdownn}
-            alt="gam"
+            alt="gambaru"
           />
       </Dropdown.Toggle>
       {handleDropdown && (

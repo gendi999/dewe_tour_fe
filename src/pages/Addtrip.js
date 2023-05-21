@@ -1,12 +1,26 @@
-import { Col, Form, Row } from "react-bootstrap";
+import {  Col, Form, Row } from "react-bootstrap";
 import { InputGroup } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import React, { useState } from 'react';
 import Footer from '../components/Footer'
+import { useNavigate } from "react-router-dom";
+// import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+import Swal from "sweetalert2";
+
 
 
 function Addtrip() {
-
+  const MySwal = withReactContent(Swal);
+  let navigate = useNavigate();
+  const handleButtonClick = () => {
+  MySwal.fire({
+    title: <strong>Ah Yang Benerr</strong>,
+    html: <i>You clicked the button!</i>,
+    icon: 'success'
+    })
+        navigate("/Trip");
+  };
     return(
         <>
         <div
@@ -77,7 +91,7 @@ function Addtrip() {
                   height: "40px",
                   color: "black",
                 }}
-                name="title"
+                // name="title"
                 // onChange={handleChangeFilm}
                 // value={dataFilm?.title}
               />
@@ -98,7 +112,7 @@ function Addtrip() {
                   height: "40px",
                   color: "black",
                 }}
-                name="title"
+                // name="title"
                 // onChange={handleChangeFilm}
                 // value={dataFilm?.title}
               />
@@ -113,7 +127,7 @@ function Addtrip() {
         <Form.Control
         style={{width:"300px", background: "rgba(195, 195, 195, 0.5)"}}
         type="date"
-        name="date"
+        // name="date"
         //   value={selectedDate}
         //   onChange={handleDateChange}
         />
@@ -153,7 +167,7 @@ type="date"
               }}
               type="number"
               placeholder="price"
-              name="price"
+              // name="price"
             />
           </Form.Group>
           <Form.Group className="mb-4" controlId="formGridAddress1">
@@ -166,7 +180,7 @@ type="date"
               }}
               type="number"
               placeholder="quota"
-              name="quota"
+              // name="quota"
             />
           </Form.Group>
 
@@ -183,7 +197,7 @@ type="date"
               color: "black",
               width:"100%",
             }}
-            name="description"
+            // name="description"
           />
           <Form.Label>Image</Form.Label>
 <Col md={12} lg={4} xl={3}>
@@ -214,7 +228,7 @@ type="date"
               </label>
               <input
                 type="file"
-                name="image"
+                // name="image"
                 // onChange={handleChangeFilm}
                 id="thumbnailFilm"
                 hidden
@@ -227,8 +241,8 @@ type="date"
 
          
           <div className="d-grid gap-2 d-md-flex justify-content-md-center">
-            <Button
-              type="submit"
+            <Button onClick={handleButtonClick}
+              // type="submit"
               style={{
                 width: "200px",
                 height: "40px",

@@ -1,9 +1,6 @@
-import detail1 from "../images/detail1.png"
-import detail2 from "../images/detail22.png"
-import detail3 from "../images/detail33.png"
 import Minus from "../images/Minus.png"
 import Plus from "../images/Plus.png"
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import ihotel from "../images/ihotel.png"
 import ilion from "../images/ilion.png"
 import ieat from "../images/ieat.png"
@@ -13,14 +10,24 @@ import icalendar from "../images/icalendar.png"
 import { Button, Carousel } from "react-bootstrap";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
+import withReactContent from 'sweetalert2-react-content'
+import Swal from "sweetalert2";
 function Detail() {
   const [jumlahProduk, setJumlahProduk] = useState(1);
-    const [index, setIndex] = useState(0);
-    const [currentEpisode, setCurrentEpisode] = useState(0);
+    const [index, setIndex] = useState(0); //untuk carausel
+    
+    //Alert
+    const MySwal = withReactContent(Swal);
+    let navigate = useNavigate();
+    const handleButtonClick = () => {
+    MySwal.fire({
+    title: <strong>Add Book Success</strong>,
+    html: <i>You clicked the button!</i>,
+    icon: 'success'
+    })
+        navigate("/Pay");
+  };
 
-    const handleNextEpisode = () => {
-      setCurrentEpisode((currentEpisode) => currentEpisode + 1);
-    };
 
     const handleSelect = (selectedIndex) => {
       setIndex(selectedIndex);
@@ -48,22 +55,22 @@ function Detail() {
         id:2,
         title:" 6D/4N Exciting Summer in ...",
         negara:"Amerika",
-        Accommodation:"Hotel 4 Nights",
-        Transportation:"Qatar Airways",
+        Accommodation:"Hotel 5 Nights",
+        Transportation:"indonesia Airways",
         imag:"Rectangle4",
         image:"Rectangle5",
         images:"Rectangle6",
-        Eat:"Liternary",
+        Eat:"Ternari",
         Duration:"4 Day 6 Night",
-        Datetrip:"26 Agustus 2020",
+        Datetrip:"2 Jan 2023",
         Idr:22398000,
         Description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
         
       },
             {
         id:3,
-        title:"4D/3N Overland Jakarta B...",
-        negara:"Indonesias",
+        title:"8D/6N Wonderful Autum ...",
+        negara:"Japanese",
         Accommodation:"Hotel 4 Nights",
         Transportation:"Qatar Airways",
         imag:"Rectangle1",
@@ -94,7 +101,7 @@ function Detail() {
       },
       {
         id:5,
-        title:"4D/3N Overland Jakarta B...",
+        title:"4D/3N Labuan Bajo Delight",
         negara:"Indonesias",
         Accommodation:"Hotel 4 Nights",
         Transportation:"Qatar Airways",
@@ -110,14 +117,14 @@ function Detail() {
       },
       {
         id:6,
-        title:"4D/3N Overland Jakarta B...",
-        negara:"Indonesias",
+        title:"5D/4N Magic Tokyo Fun",
+        negara:"japan",
         Accommodation:"Hotel 4 Nights",
-        Transportation:"Qatar Airways",
+        Transportation:"Rusia Airways",
         imag:"Rectangle2",
         image:"Rectangle5",
         images:"Rectangle4",
-        Eat:"Liternary",
+        Eat:"Liternary apa nih",
         Duration:"4 Day 6 Night",
         Datetrip:"26 Agustus 2020",
         Idr:10039800,
@@ -187,8 +194,8 @@ function Detail() {
 
 <div style={{marginTop:"20px"}}>
     <img src={require(`../images/Card/${selectedTr.images}.png`)} alt="gambar"></img>
-    <img style={{marginLeft:"45px"}} src={require(`../images/Card/${selectedTr.imag}.png`)} alt="gambar"></img>
     <img style={{marginLeft:"45px"}} src={require(`../images/Card/${selectedTr.image}.png`)} alt="gambar"></img>
+    <img style={{marginLeft:"45px"}} src={require(`../images/Card/${selectedTr.imag}.png`)} alt="gambar"></img>
     </div>
         <Carousel.Caption>
           <h3>Third slide label</h3>
@@ -261,8 +268,8 @@ function Detail() {
     <div style={{margin: "150px", marginTop:"0",marginBottom:"0"}}>
     <hr style={{ borderTop: "2px solid black" }} />
     </div>
-    <Link to="/Pay">
-    <Button style={{
+    {/* <Link to="/Pay"> */}
+    <Button onClick={handleButtonClick} style={{
       marginLeft:"1000px",
       width: "213px",
       height: "50px",
@@ -272,7 +279,7 @@ function Detail() {
       borderRadius:"5px"
       
     }}>Book</Button>
-    </Link>
+    {/* </Link> */}
 
 <div style={{paddingTop:"100px"}}>
           <Footer/>

@@ -7,6 +7,7 @@ const Login = () => {
   const [username, setUsername] = useState(''); //2 argumen string kodong dikarenakan nilai nya belum ada
   const [password, setPassword] = useState(''); // di saat di inputkan maka nilainya akan di perbarui mengunakan si set
   const [showModal, setShowModal] = useState(false);
+  const [show, setShow] = useState(false);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -31,7 +32,7 @@ const Login = () => {
 
   return (
     <div>
-      <Button className="" variant="warning" onClick={() => setShowModal(true)}>
+      <Button className="" style={{width:"55px",height:"35px"}} variant="warning" onClick={() => setShowModal(true)}>
         Login
       </Button>
 
@@ -64,7 +65,7 @@ const Login = () => {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-      <Button className="loginn mx-3 text-light" variant="warning" onClick={handleLogin}>
+      <Button style={{height:'45px'}}  className="loginn mx-3 text-light" variant="warning" onClick={handleLogin}>
         Login
       </Button>
       </Modal.Footer>
@@ -74,7 +75,7 @@ const Login = () => {
           <p style={{ fontSize: "12px" }} className="text-muted">
             Already have an account ? Klik{" "}
             <a
-              onClick={showModal}
+              onClick={show}
               style={{
                 textDecoration: "none",
                 color: "gray",

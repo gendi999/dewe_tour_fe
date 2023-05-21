@@ -28,7 +28,7 @@ function Trip() {
           },
           tr3: {
             id:3,
-            title:"4D/3N Overland Jakarta B...",
+            title:"8D/6N Wonderful Autum ...",
             images:"Rectangle3",
             negara:"Japan",
             idr:"12.398.00",
@@ -44,7 +44,7 @@ function Trip() {
           },
           tr5: {
             id:5,
-            title:"4D/3N Overland Jakarta B...",
+            title:"4D/3N Labuan Bajo Delight",
             images:"Rectangle5",
             negara:"Indonesia",
             idr:"12.398.00",

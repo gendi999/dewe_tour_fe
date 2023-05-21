@@ -53,6 +53,7 @@ function Historytrip() {
             <div className="flex">
                 <p style={{marginLeft:"310px",color:"#959595"}}>Hotel 4 Nights</p>
                 <p style={{marginLeft:"60px",color:"#959595"}}>Qatar Airways</p>
+                <p style={{marginLeft:"130px",fontFamily:"Avenir",fontWeight:"bold",marginTop:"20px"}}>1518A29</p>
             </div>
             <div className="flex" >
                 <p >No</p>
