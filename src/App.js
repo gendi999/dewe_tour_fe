@@ -10,6 +10,7 @@ import Login from "./components/Login"
 import Home from "./components/Home";
 import Pay from "./components/Pay";
 import PrivateRoute from "./pages/PrivateRoutes"
+import PrivateRouteUser from "./pages/PrivateRoutesUser"
 import Footer from "./components/Footer";
 // import Props from "./components/Props";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -23,7 +24,8 @@ import { useState } from "react";
 
 
 function App() {
-  const [isAdminn, setisAdmin]=useState(false)
+  const [isAdminn]=useState(false)
+  const [isAdmin]=useState(false)
   return (
     <div>
       <Router>
@@ -38,9 +40,10 @@ function App() {
         <Route path="/Addtrip" element={<Addtrip />} />
   </Route>
 
-        
+  <Route element={<PrivateRouteUser isAdmin={isAdmin} />}>
         <Route path="/Profile" element={<Profile />} />
         <Route path="/Pay" element={<Pay />} />
+      </Route>
         <Route path="/Detail/:id" element={<Detail />} />
         
         <Route path="/Login" element={<Login />} />

@@ -2,15 +2,15 @@
 import { Outlet, Navigate } from "react-router-dom";
 
 // create component here
-const PrivateRoute = () => {
-  const isAdminn = localStorage.getItem("isAdminn");
+const PrivateRouteUser = () => {
+  const isAdmin = localStorage.getItem("isAdmin");
   // const isAdmin = localStorage.getItem("isAdmin");
-  if (isAdminn) {
+  if (isAdmin) {
     return <Outlet />;
   } else {
     return <Navigate to={"/"} />;
   }
 };
 
-export default PrivateRoute;
+export default PrivateRouteUser;
 

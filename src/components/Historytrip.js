@@ -2,10 +2,7 @@ import Icon from "../images/Icon.png"
 import bukti from "../images/bukti.png"
 import "react-bootstrap";
 import qrcode from "../images/qrcode.png"
-import Footer from '../components/Footer'
-import Table from "react-bootstrap/Table";
-import Dropdown from "react-bootstrap/Dropdown";
-import { Button } from "react-bootstrap";
+
 function Historytrip() {
  
     return(

@@ -92,7 +92,7 @@ function Profile() {
             </Col>
             <Col sm={6} style={{ paddingLeft: "10px" }}>
               <img
-                src={require( "../image/profile.png" )}
+                src={require( "../images/profile.png" )}
                 alt="Profile"
                 style={{
                   width: "280px",
@@ -118,6 +118,8 @@ top: "521px", }}>
       </div>
       <h1 style={{marginLeft:"200px", fontWeight:'bold'}}>History Trip</h1>
         <Historytrip/>
+
+        <Footer style={{marginTop:"800px"}}/>
       </>
     );
   }

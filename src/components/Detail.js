@@ -13,6 +13,8 @@ import { useParams } from "react-router-dom";
 import withReactContent from 'sweetalert2-react-content'
 import Swal from "sweetalert2";
 function Detail() {
+  const [isAdmin] = useState(localStorage.getItem('isAdmin'));
+
   const [jumlahProduk, setJumlahProduk] = useState(1);
     const [index, setIndex] = useState(0); //untuk carausel
     
@@ -268,18 +270,24 @@ function Detail() {
     <div style={{margin: "150px", marginTop:"0",marginBottom:"0"}}>
     <hr style={{ borderTop: "2px solid black" }} />
     </div>
-    {/* <Link to="/Pay"> */}
-    <Button onClick={handleButtonClick} style={{
-      marginLeft:"1000px",
-      width: "213px",
-      height: "50px",
-      left: "1016px",
-      top: "1284px",
-      background:" #FFAF00",
-      borderRadius:"5px"
-      
-    }}>Book</Button>
-    {/* </Link> */}
+{ isAdmin ? (
+
+  <Button onClick={handleButtonClick} style={{
+    marginLeft:"1000px",
+    width: "213px",
+    height: "50px",
+    left: "1016px",
+    top: "1284px",
+    background:" #FFAF00",
+    borderRadius:"5px"
+    
+  }}>Book</Button>
+
+
+  ) : (
+    <div></div>
+  )
+}
 
 <div style={{paddingTop:"100px"}}>
           <Footer/>

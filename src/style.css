@@ -147,7 +147,7 @@ border-radius: 5px;
     width: 100%!important;
   }
    .dropdown {
-    background-color: rgb(14, 10, 10);
+    background-color: rgb(14, 9, 9);
     display: block!important;
     position: absolute;
     margin: 100px;
@@ -233,8 +233,15 @@ border-radius: 5px;
   /* margin-right: 200px !important; */
 }
 .btnsa {
-  padding:0 !important;
+  /* padding: 2px !important; */
   background-color: transparent !important;
   border: 0;
+  width:0 !important;
+  /* margin-right: 100px; */
+  background-color: turquoise;
   border-radius: 300px !important;
 }
+/* .Mdrop {
+  margin-left: 300px !important;
+  inset: 10px,10px,10px,10px !important;
+} */

@@ -4,28 +4,33 @@ import Home from '../components/Home'
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { Dropdown, NavDropdown } from 'react-bootstrap';
-import Dropdownn from "../image/Ellipse1.png"
-import bill from "../image/bill.png"
-import userr from "../image/userr.png"
+import Dropdownn from "../images/Ellipse1.png"
+import bill from "../images/bill1.png"
+import userr from "../images/userr.png"
 import journey from "../images/journey.png"
-import logout from "../image/logout.png"
+import logout from "../images/logout.png"
 function Header() {
   const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('loggedIn') || false);
   const [isAdmin, setIsAdmin] = useState(localStorage.getItem('isAdmin') || false);
+  const [isAdminn,setIsAdminn] = useState(localStorage.getItem('isAdminn') || false);
   const [handleDropdown, setHandleDropdown] = useState(false);
 
-  const handleLogin = (isAdmin) => {
+  const handleLogin = (isAdmin,isAdminn) => {
     localStorage.setItem('loggedIn', true);
     localStorage.setItem('isAdmin', isAdmin);
+    localStorage.setItem('isAdminn', isAdminn);
     setIsLoggedIn(true);
     setIsAdmin(isAdmin);
+    setIsAdminn(isAdminn);
   };
 
   const handleLogout = () => {
     setIsLoggedIn(false);
     setIsAdmin(false);
+    setIsAdminn(false);
     localStorage.removeItem('loggedIn');
     localStorage.removeItem('isAdmin');
+    localStorage.removeItem('isAdminn');
     window.location="/"
   };
    return <nav >
@@ -54,7 +59,7 @@ function Header() {
           />
       </Dropdown.Toggle>
       {handleDropdown && (
-        <Dropdown.Menu>
+        <Dropdown.Menu className="Mdrop  mt-0 ms-1">
           {isAdmin ? (
             <>
 
@@ -69,7 +74,7 @@ function Header() {
               Pay</Link>
               </Dropdown.Item>
              </> 
-          ) : (
+          ) :  (
             <>
               <Dropdown.Item className="bg-white" style={{
 
@@ -79,7 +84,7 @@ function Header() {
               Trip </Link>
           </Dropdown.Item>
               <Dropdown.Item className="bg-white">
-              <img src={userr}/>
+              <img src={bill}/>
             <Link to="/Transaction">
               Transaction </Link>
           </Dropdown.Item>
